@@ -810,6 +810,11 @@ class ManagerTest extends \Test\TestCase {
 				['core', 'shareapi_default_expire_date', 'no', 'yes'],
 			]);
 
+		$this->config->method('getSystemValueInt')
+			->willReturnMap([
+				['sharing.link.defaultExpDays', 3, 3],
+			]);
+
 		$expected = new \DateTime();
 		$expected->setTime(0,0,0);
 		$expected->add(new \DateInterval('P3D'));

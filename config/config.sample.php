@@ -1376,6 +1376,15 @@ $CONFIG = [
  */
 'sharing.force_share_accept' => false,
 
+/**
+ * Set the default expiration date of link shares. This has to be less than the enforced expiration date.
+ */
+'sharing.link.defaultExpDays' => 14,
+
+/**
+ * Set the default expiration date of internal shares. This has to be less than the enforced expiration date.
+ */
+'sharing.internal.defaultExpDays' => 14,
 
 /**
  * All other configuration options
